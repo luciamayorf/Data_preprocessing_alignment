@@ -3,9 +3,9 @@ In this repository I keep the scripts used for sequencing data quality control (
 
 It is mainly designed for the processing of low-coverage libraries generated with NovaSeqX. 
 
-## Data quality control
+## Raw data quality control
 
-First, we do a first FastQC analysis of the raw data received with FastQC, and summarize the results obtained with MultiQC.
+First, we do a first FastQC analysis of the FASTQ files received with FastQC, and summarize the results obtained with MultiQC.
 
 ```
 python scripts/rawdataqc_scripts.py config/all_rawreads_fastqs.yml
