@@ -5,11 +5,28 @@ It is mainly designed for the processing of low-coverage libraries generated wit
 
 ## Raw data quality control
 
-First, we do a first FastQC analysis of the FASTQ files received with FastQC, and summarize the results obtained with MultiQC.
+First, we do a first FastQC analysis of the FASTQ files received with FastQC.
 
 ```
 python scripts/rawdataqc_scripts.py config/all_rawreads_fastqs.yml
 ```
+
+Once obtained the scripts, we submit them to CESGA ft3:
+```
+for sh in $(ls scripts/rawreads_fastqc/*.sh)
+ do
+  echo "sbatch $sh"
+  sbatch -t 03:00:00 -c 20 --mem 5GB $sh
+done
+```
+OJO, TENGO QUE CAMBIAR DONDE SE GUARDAN LOS SCRIPTS EN FUNCIÓN DE CADA LIBRERÍA, PARA NO CORRERLOS TODOS (LOS YA HECHOS PREVIAMENTE) OTRA VEZ:
+
+
+Finally, we summarize the obtained results running the MultiQC script.
+```
+sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastqc/output>
+```
+
 
 
 
