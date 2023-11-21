@@ -8,7 +8,7 @@ It is mainly designed for the processing of low-coverage libraries generated wit
 First, we do a first FastQC analysis of the FASTQ files received with FastQC.
 
 ```
-python scripts/rawdataqc_scripts.py config/all_rawreads_fastqs.yml
+python scripts/make_fastqc_scripts.py config/all_rawreads_fastqs.yml
 ```
 
 Once obtained the scripts, we submit them to CESGA ft3:
