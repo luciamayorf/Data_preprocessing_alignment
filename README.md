@@ -1,4 +1,7 @@
 # Data_preprocessing_alignment
+
+This repository is an inspiration from Enrico's [Lynx_demography](https://github.com/Enricobazzi/Lynx_Demography) repository.
+
 In this repository I keep the scripts used for sequencing data quality control (fastQC and multiQC), trimming (fastp) and alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package).
 
 It is mainly designed for the processing of low-coverage libraries generated with NovaSeqX. 
