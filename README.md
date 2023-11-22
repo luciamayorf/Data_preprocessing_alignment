@@ -40,8 +40,16 @@ We do a first trimming with fastp, followed by a quality control with FastQC and
 
 
 
-
-
 ## Alignment and quality control
 
 Finally, we align the reads to the reference genome using [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) to generate the scripts. After that, we perform a quality control of the aligment with qualimap, samtools and MultiQC.
+
+
+## Variant calling
+
+We use the WGS model from [DeepVariant](https://github.com/google/deepvariant) to call variants in our dataset.
+
+
+
+
+
