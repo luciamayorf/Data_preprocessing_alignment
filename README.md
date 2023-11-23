@@ -49,6 +49,16 @@ Finally, we align the reads to the reference genome using [congenomics_fastq_ali
 
 We use the WGS model from [DeepVariant](https://github.com/google/deepvariant) to call variants in our dataset.
 
+We first use a bash script to create the samples bams dictionary:
+
+```
+bash ./scripts/make_deepvariant_dictionary.sh
+```
+Then we generate a deepvariant script per sample:
+```
+python scripts/make_deepvariant_scripts.py config/all_bams_calling.yml
+```
+
 
 
 
