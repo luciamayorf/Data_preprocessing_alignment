@@ -1,4 +1,4 @@
-# Data_preprocessing_alignment
+# Data_preprocessing_alignment_variantcalling
 
 This repository is an inspiration from Enrico's [Lynx_demography](https://github.com/Enricobazzi/Lynx_Demography) repository.
 
