@@ -22,7 +22,7 @@ sample_dict:
     ['path/to/bam2', 'file2.bam', 'female']
 
 The script will generate a bash script for each bam in the sample_dict.
-Here's an example of the bash script that would be generated for bam:
+Here's an example of t he bash script that would be generated for bam:
 
 #!/bin/bash
 #SBATCH --job-name=sample1_gvcf
