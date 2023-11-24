@@ -87,10 +87,10 @@ module load cesga/2020 deepvariant/1.6.0
 {command} {sex_flag}
 '''
         
-        # Write the bash script to a file
-        script_file = f'scripts/deepvariant/{sample}_gvcf.sh'
-        with open(script_file, 'w') as f:
-            f.write(script)
+# Write the bash script to a file
+script_file = f'scripts/deepvariant/{sample}_gvcf.sh'
+with open(script_file, 'w') as f:
+  f.write(script)
             
             
             
