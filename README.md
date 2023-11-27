@@ -61,5 +61,5 @@ python scripts/make_deepvariant_scripts.py config/all_bams_calling.yml
 
 
 
-
+python make_deepvariant_scripts.py all_bams_calling.yml
 

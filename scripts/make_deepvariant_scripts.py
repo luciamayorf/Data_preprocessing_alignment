@@ -58,7 +58,7 @@ for sample in data['sample_dict']:
         
     # Generate the deepvariant command
     command = f'deepvariant_gpu --model_type=WGS --ref=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.scaffolds.revcomp.scaffolds.fa \
---reads={bam} --output_gvcf=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz --num_shards=32'
+    --reads={bam} --output_gvcf=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz --num_shards=32'
        
  	# Check the sex of the sample and add --haploid-contigs flag if the sample is male:
     sex_flag = ''
@@ -71,26 +71,27 @@ for sample in data['sample_dict']:
         ' --par_regions_bed="mLynPar1.2_par.bed"'
       ])
 
-    # Generate the bash script
-    script = f'''\
-#!/bin/bash
-#SBATCH --job-name={sample}_{bam}_gvcf
-#SBATCH --output=logs/deepvariant/{sample}_{bam}_gvcf.out			##DUDA: ¿RUTA ABSOLUTA O RELATIVA?
-#SBATCH --error=logs/deepvariant/{sample}_{bam}_gvcf.err
-#SBATCH --time=6:00:00
-#SBATCH --mem=50G
-#SBATCH --cpus-per-task=32
-#SBATCH --gres=gpu:a100:1
+  # Generate the bash script
+  script = f'''\
+  #!/bin/bash
+  #SBATCH --job-name={sample}_{bam}_gvcf
+  #SBATCH --output=logs/deepvariant/{sample}_{bam}_gvcf.out			##DUDA: ¿RUTA ABSOLUTA O RELATIVA?
+  #SBATCH --error=logs/deepvariant/{sample}_{bam}_gvcf.err
+  #SBATCH --time=6:00:00
+  #SBATCH --mem=50G
+  #SBATCH --cpus-per-task=32
+  #SBATCH --gres=gpu:a100:1
 
-module load cesga/2020 deepvariant/1.6.0
+  module load cesga/2020 deepvariant/1.6.0
 
-{command} {sex_flag}
-'''
+  {command} {sex_flag}
+  '''
+
         
-# Write the bash script to a file
-script_file = f'scripts/deepvariant/{sample}_gvcf.sh'
-with open(script_file, 'w') as f:
-  f.write(script)
+  # Write the bash script to a file
+  script_file = f'scripts/deepvariant/{sample}_gvcf.sh'
+  with open(script_file, 'w') as f:
+    f.write(script)
             
             
             

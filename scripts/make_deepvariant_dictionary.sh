@@ -4,9 +4,9 @@
 # The dictionary will have the following format:
 # sample_dict:
 #  sample1:
-#   ['path/to/bam1', 'file1.bam', 'male']
-# sample2:
-#   ['path/to/bam2', 'file2.bam', 'female']
+#    ['path/to/bam1', 'file1.bam', 'male']
+#  sample2:
+#    ['path/to/bam2', 'file2.bam', 'female']
 
 ## CAUTION: I need to be carefull with the sample list and hidden characters (you can see them with sed -n l filename.txt). 
 	# I need to remove the hidden characters from the sample list before running this script, in this case I used sed -i 's/male\t/male/g' fastq_samples_list.txt. 
@@ -19,6 +19,8 @@ FASTQ_LIST='/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data
 BAM_FOLDER='/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams'
 DICTIONARY='all_bams_calling.yml'
 
+# Print the first line with "sample_dict:"
+echo "sample_dict:" > "${DICTIONARY}"
 
 while read line ; do
 	# get the sample name from the fastq list:
@@ -40,10 +42,12 @@ while read line ; do
 	BAM_PATH=($(dirname "${BAM_INFO}"))
 
 	# Now we will arrange the information in the dictionary format:
-	dict_entry="${SAMPLE_NAME}:\n   ['${BAM_PATH}', '${BAM}', '${SEX}']"
+	dict_entry="  ${SAMPLE_NAME}:\n    ['${BAM_PATH}', '${BAM}', '${SEX}']"
 
 	# Now we will print the dictionary entry:
-	echo -e "${dict_entry}" >> ${DICTIONARY}
+	echo -e "${dict_entry}" >> "${DICTIONARY}"
 
-	echo "${BAM}"
 done < <(sed 's/_EKDN[0-9]*-1A_[A-Z0-9]*_L[0-9]*_[0-9]*.fastp.fq.gz//g' ${FASTQ_LIST} | uniq)
+
+
+ 
