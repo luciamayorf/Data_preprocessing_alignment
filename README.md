@@ -67,7 +67,7 @@ done
 Finally, we summarize the obtained results running the MultiQC script.
 ```
 sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/output>
-
+```
 
 ME QUEDO AQUÍ
 
