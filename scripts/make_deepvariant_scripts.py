@@ -59,8 +59,8 @@ for sample in data['sample_dict']:
     command = ' '.join([
       'deepvariant_gpu --model_type=WGS',
       '--ref=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/',
-      '--reads={bam}',
-      '--output_gvcf=mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz',
+      f'--reads={bam}',
+      f'--output_gvcf=mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz',
       '--num_shards=32'
     ])
        
