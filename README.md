@@ -69,7 +69,7 @@ Finally, we summarize the obtained results running the MultiQC script.
 sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/output>
 ```
 
-ME QUEDO AQUÍ
+ME QUEDO AQUÍ. NO HE PROBADO EL FUNCIONAMIENTO DE NINGÚN SCRIPT EXCEPTO EL DE DEEPVARIANT.
 
 ## Alignment and quality control
 
@@ -79,7 +79,6 @@ Finally, we align the reads to the reference genome using [congenomics_fastq_ali
 ```
 
 ```
-
 
 
 ## Variant calling
