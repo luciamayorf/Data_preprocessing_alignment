@@ -1,0 +1,10 @@
+sample_dict:
+  sample1:
+    id1:
+      ['path/to/fastq/pair' , 'fastq1.fq.gz', 'fastq2.fq.gz']
+    id2:
+      ['path/to/fastq/pair' , 'fastq1.fq.gz', 'fastq2.fq.gz']
+  sample2:
+    id3:
+      ['path/to/fastq/pair' , 'fastq1.fq.gz', 'fastq2.fq.gz']
+  sample3:
