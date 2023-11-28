@@ -36,7 +36,7 @@ Here's an example of the bash script that would be generated for a bam file:
 module load cesga/2020 deepvariant
 
 deepvariant_gpu --model_type=WGS --ref=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.scaffolds.revcomp.scaffolds.fa \
---reads=/path/to/bam --output_gvcf=/path/to/output/output.g.vcf.gz --num_shards=32
+--reads=/path/to/bam --output_gvcf=/path/to/output/output.g.vcf.gz --num_shards=32 --output_vcf=/path/to/output/output.vcf.gz
 '''
 
 # Parse command-line arguments
@@ -55,7 +55,7 @@ for sample in data['sample_dict']:
     containing_folder = data['sample_dict'][sample][0]
     bam = os.path.join(containing_folder, data['sample_dict'][sample][1])
     bam_name = data['sample_dict'][sample][1]
-    bam_name_root = os.path.splitext(bam_name)[0]                                   ###### NO LO ESTÁ LEYENDO BIEN, NO ESTÁ QUITANDO LA EXTENSIÓN .bam, COGE TODA LA RUTA. REVISAR TB EL OTRO SCRIPT.
+    bam_name_root = os.path.splitext(bam_name)[0]
         
     # Generate the deepvariant command
     command = ' '.join([
@@ -63,6 +63,7 @@ for sample in data['sample_dict']:
       '--ref=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/',
       f'--reads={bam}',
       f'--output_gvcf=mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz',
+      f'--output_vcf=mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.vcf.gz',
       '--num_shards=32'
     ])
        
@@ -71,7 +72,7 @@ for sample in data['sample_dict']:
 
     if data['sample_dict'][sample][2] == "male":
       sex_flag = ''.join([
-        '--haploid-contigs="mLynPar1.2_ChrX,mLynPar1.2_ChrY,mLynPar1.2_ChrY_unloc_1,mLynPar1.2_ChrY_unloc_2,mLynPar1.2_ChrY_unloc_3,',
+        '--haploid_contigs="mLynPar1.2_ChrX,mLynPar1.2_ChrY,mLynPar1.2_ChrY_unloc_1,mLynPar1.2_ChrY_unloc_2,mLynPar1.2_ChrY_unloc_3,',
         'mLynPar1.2_ChrY_unloc_4,mLynPar1.2_ChrY_unloc_5,mLynPar1.2_ChrY_unloc_6,mLynPar1.2_ChrY_unloc_7,mLynPar1.2_ChrY_unloc_8,',
         'mLynPar1.2_ChrY_unloc_9,mLynPar1.2_ChrY_unloc_10,mLynPar1.2_ChrY_unloc_11,mLynPar1.2_ChrY_unloc_12"',
         ' --par_regions_bed="/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.chrX_PAR_sexChr.bed"'
