@@ -74,7 +74,7 @@ for sample in data['sample_dict']:
         '--haploid-contigs="mLynPar1.2_ChrX,mLynPar1.2_ChrY,mLynPar1.2_ChrY_unloc_1,mLynPar1.2_ChrY_unloc_2,mLynPar1.2_ChrY_unloc_3,',
         'mLynPar1.2_ChrY_unloc_4,mLynPar1.2_ChrY_unloc_5,mLynPar1.2_ChrY_unloc_6,mLynPar1.2_ChrY_unloc_7,mLynPar1.2_ChrY_unloc_8,',
         'mLynPar1.2_ChrY_unloc_9,mLynPar1.2_ChrY_unloc_10,mLynPar1.2_ChrY_unloc_11,mLynPar1.2_ChrY_unloc_12"',
-        ' --par_regions_bed="mLynPar1.2_par.bed"'
+        ' --par_regions_bed="/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.chrX_PAR_sexChr.bed"'
       ])
 
     # Generate the bash script
