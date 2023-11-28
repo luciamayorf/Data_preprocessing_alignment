@@ -2,7 +2,7 @@
 
 This repository is an inspiration from Enrico's [Lynx_demography](https://github.com/Enricobazzi/Lynx_Demography) repository.
 
-In this repository I keep the scripts used for sequencing data quality control (fastQC and multiQC), trimming (fastp), alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package) and variant calling (DeepVariant).
+In this repository, I keep the scripts used for sequencing data quality control ([fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [multiQC](https://multiqc.info/docs/)), trimming ([fastp](https://github.com/OpenGene/fastp)), alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package), variant calling ([DeepVariant](https://github.com/google/deepvariant)) and gVCF merging ([GLnexus](https://github.com/dnanexus-rnd/GLnexus)).
 
 ---
 
@@ -40,9 +40,10 @@ We do a first trimming with fastp, followed by a quality control with FastQC and
 
 We run fastp:
 
-```python
+```py
 python scripts/make_fastp_scripts.py config/all_rawreads_fastqs.yml
 ```
+  
   here I still need to change the path to the adapter fasta
 
 ```bash
@@ -57,7 +58,7 @@ done
 
 Then we assess the quality of the trimming:
 
-```python
+```py
 python scripts/make_fastqc_scripts.py config/all_fastp_fastqs.yml
 ```
 
@@ -117,14 +118,18 @@ done
 
 We will use Qualimap bamqc. We first create a script for each bam file:
 
-```python
+```py
 python scripts/make_qualimap_scripts.py config/all_bams_qualimap_and_calling.yml
 ```
 
 Then we launch the scripts:
 
-
-
+```bash
+for script in /path/to/qualimap/scripts/*_qualimap.sh; do
+  echo "sbatch of ${script}"
+  sbatch ${script}    
+done
+```
 
 ME QUEDO AQUÍ. NO HE PROBADO EL FUNCIONAMIENTO DE NINGÚN SCRIPT EXCEPTO EL DE DEEPVARIANT.
 
@@ -142,10 +147,24 @@ bash ./scripts/make_deepvariant_dictionary.sh
 
 Then we generate a deepvariant script per sample:
 
-```python
+```py
 python scripts/make_deepvariant_scripts.py config/all_bams_qualimap_and_calling.yml
 ```
 
+---
+
 ## 5. gVCF merging
 
-We will use GLnexus.
+We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF.
+
+Initial test, should be something like this:
+
+```bash
+module load cesga/2020 glnexus/1.4.1
+module load cesga/2020 bzip2/1.0.8
+module load cesga/2020 samtools/1.14
+
+glnexus_cli --config DeepVariant /in/*.g.vcf.gz | bcftools view - | bgzip -@ 4 -c > output.vcf.gz
+```
+
+MIRAR LO DEL UNFILTERED MODO DE GLNEXUS-DV.

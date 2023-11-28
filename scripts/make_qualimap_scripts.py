@@ -62,7 +62,7 @@ for sample in data['sample_dict']:
     # Generate the bash script
     script = f'''\
 #!/bin/bash
-#SBATCH --job-name={bam_name_root}
+#SBATCH --job-name={bam_name_root}_qualimap
 #SBATCH --output=logs/qualimap/{bam_name_root}_qualimap.out
 #SBATCH --error=logs/qualimap/{bam_name_root}_qualimap.err
 #SBATCH --time=1:00:00
