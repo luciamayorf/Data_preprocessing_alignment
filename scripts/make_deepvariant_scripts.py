@@ -55,7 +55,7 @@ for sample in data['sample_dict']:
     containing_folder = data['sample_dict'][sample][0]
     bam = os.path.join(containing_folder, data['sample_dict'][sample][1])
     bam_name = data['sample_dict'][sample][1]
-    bam_name_root = os.path.splitext(bam_name)[0]
+    bam_name_root = os.path.splitext(bam_name)[0]                                   ###### NO LO ESTÁ LEYENDO BIEN, NO ESTÁ QUITANDO LA EXTENSIÓN .bam, COGE TODA LA RUTA. REVISAR TB EL OTRO SCRIPT.
         
     # Generate the deepvariant command
     command = ' '.join([
