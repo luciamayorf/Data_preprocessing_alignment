@@ -22,12 +22,12 @@ sample_dict:
     ['path/to/bam2', 'file2.bam', 'female']
 
 The script will generate a bash script for each bam in the sample_dict.
-Here's an example of the bash script that would be generated for bam:
+Here's an example of the bash script that would be generated for a bam file:
 
 #!/bin/bash
-#SBATCH --job-name=sample1_gvcf
-#SBATCH --output=logs/deepvariant/sample1_gvcf.out
-#SBATCH --error=logs/deepvariant/sample1_gvcf.err
+#SBATCH --job-name=alignment1tyu8jik_gvcf
+#SBATCH --output=logs/deepvariant/alignment1_gvcf.out
+#SBATCH --error=logs/deepvariant/alignment1_gvcf.err
 #SBATCH --time=6:00:00
 #SBATCH --mem=50G
 #SBATCH --cpus-per-task=32
@@ -49,11 +49,13 @@ with open(args.config_file, 'r') as f:
     data = yaml.safe_load(f)
 
 
-# Loop through each sample in the YAML file
+# Loop through each sample bam in the YAML file
 for sample in data['sample_dict']:
     # Get the containing folder the bam file name:
     containing_folder = data['sample_dict'][sample][0]
     bam = os.path.join(containing_folder, data['sample_dict'][sample][1])
+    bam_name = data['sample_dict'][sample][1]
+    bam_name_root = os.path.splitext(bam_name)[0]
         
     # Generate the deepvariant command
     command = ' '.join([
@@ -78,9 +80,9 @@ for sample in data['sample_dict']:
     # Generate the bash script
     script = f'''\
 #!/bin/bash
-#SBATCH --job-name={sample}_{bam}_gvcf
-#SBATCH --output=logs/deepvariant/{sample}_{bam}_gvcf.out			##DUDA: ¿RUTA ABSOLUTA O RELATIVA?
-#SBATCH --error=logs/deepvariant/{sample}_{bam}_gvcf.err
+#SBATCH --job-name={sample}_{bam_name_root}_gvcf
+#SBATCH --output=logs/deepvariant/{sample}_{bam_name_root}_gvcf.out			##DUDA: ¿RUTA ABSOLUTA O RELATIVA?
+#SBATCH --error=logs/deepvariant/{sample}_{bam_name_root}_gvcf.err
 #SBATCH --time=6:00:00
 #SBATCH --mem=50G
 #SBATCH --cpus-per-task=32

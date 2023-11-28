@@ -1,0 +1,101 @@
+sample_dict:
+  c_lp_do_1849:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'BU_001_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0010:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_10_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_ca_1363:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1363_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_1372:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1372_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_1430:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1430_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_1431:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1431_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_ca_1480:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1480_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_1607:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1607_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_1812:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1812_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_ca_1814:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1814_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_1819:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1819_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_1858:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1858_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_1860:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1860_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0001:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_1_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0202:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_202_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_2046:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_2046_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0205:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_205_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_sm_0211:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_211_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0215:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_215_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0219:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_219_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_sm_0220:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_220_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_sm_0225:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_225_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_sm_0239:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_239_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0256:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_256_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0260:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_260_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_sm_0278:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_278_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0290:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_290_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_sm_0377:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_377_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0380:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_380_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0384:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_384_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0385:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_385_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_sm_0390:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_390_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0451:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_451_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_sm_0452:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_452_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_sm_0474:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_474_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0005:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_5_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0601:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_601_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_do_0611:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_611_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_sm_0614:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_614_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0683:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_683_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_0692:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_692_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_ca_0693:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_693_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_0756:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_756_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_ca_0765:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_765_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0773:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_773_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_do_0784:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_784_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_0800:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_800_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'female']
+  c_lp_ca_0805:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_805_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_0829:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_829_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
+  c_lp_ca_0855:
+    ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams', 'LP_855_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam', 'male']
