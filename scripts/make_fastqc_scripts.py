@@ -61,7 +61,7 @@ for sample in data['sample_dict']:
         fastq_r1 = os.path.join(containing_folder, data['sample_dict'][sample][fastq_pair][1])
         fastq_r2 = os.path.join(containing_folder, data['sample_dict'][sample][fastq_pair][2])
         
-        # Generate the fastqc command
+        # Generate the fastqc command (I need to create the fastqc folder output in each containing folder first)
         command = f'fastqc -o {os.path.join(containing_folder, "fastqc")} -t 6 {fastq_r1} {fastq_r2}'
         
         # Generate the bash script
