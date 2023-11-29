@@ -25,9 +25,9 @@ The script will generate a bash script for each bam in the sample_dict.
 Here's an example of the bash script that would be generated for a bam file:
 
 #!/bin/bash
-#SBATCH --job-name=alignment1tyu8jik_gvcf
-#SBATCH --output=logs/deepvariant/alignment1_gvcf.out
-#SBATCH --error=logs/deepvariant/alignment1_gvcf.err
+#SBATCH --job-name=alignment_gvcf
+#SBATCH --output=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/deepvariant/alignment1_gvcf.out
+#SBATCH --error=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/deepvariant/alignment1_gvcf.err
 #SBATCH --time=6:00:00
 #SBATCH --mem=50G
 #SBATCH --cpus-per-task=32
@@ -60,14 +60,14 @@ for sample in data['sample_dict']:
     # Generate the deepvariant command
     command = ' '.join([
       'deepvariant_gpu --model_type=WGS',
-      '--ref=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/',
+      '--ref=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.scaffolds.revcomp.scaffolds.fa',
       f'--reads={bam}',
-      f'--output_gvcf=mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz',
-      f'--output_vcf=mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.vcf.gz',
+      f'--output_gvcf=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.g.vcf.gz',
+      f'--output_vcf=/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/{sample}_mLynPar1.2_ref.vcf.gz',
       '--num_shards=32'
     ])
        
-    # Check the sex of the sample and add --haploid-contigs flag if the sample is male:
+    # Check the sex of the sample and add --haploid_contigs and --par_regions_bed flags if the sample is male
     sex_flag = ''
 
     if data['sample_dict'][sample][2] == "male":
@@ -75,15 +75,15 @@ for sample in data['sample_dict']:
         '--haploid_contigs="mLynPar1.2_ChrX,mLynPar1.2_ChrY,mLynPar1.2_ChrY_unloc_1,mLynPar1.2_ChrY_unloc_2,mLynPar1.2_ChrY_unloc_3,',
         'mLynPar1.2_ChrY_unloc_4,mLynPar1.2_ChrY_unloc_5,mLynPar1.2_ChrY_unloc_6,mLynPar1.2_ChrY_unloc_7,mLynPar1.2_ChrY_unloc_8,',
         'mLynPar1.2_ChrY_unloc_9,mLynPar1.2_ChrY_unloc_10,mLynPar1.2_ChrY_unloc_11,mLynPar1.2_ChrY_unloc_12"',
-        ' --par_regions_bed="/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.chrX_PAR_sexChr.bed"'
+        ' --par_regions_bed="/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/reference_genomes/lynx_pardinus_mLynPar1.2/mLynPar1.2.PAR1_sexChr.bed"'
       ])
 
     # Generate the bash script
     script = f'''\
 #!/bin/bash
 #SBATCH --job-name={sample}_{bam_name_root}_gvcf
-#SBATCH --output=logs/deepvariant/{sample}_{bam_name_root}_gvcf.out			##DUDA: ¿RUTA ABSOLUTA O RELATIVA?
-#SBATCH --error=logs/deepvariant/{sample}_{bam_name_root}_gvcf.err
+#SBATCH --output=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/deepvariant/{sample}_{bam_name_root}_gvcf.out
+#SBATCH --error=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/deepvariant/{sample}_{bam_name_root}_gvcf.err
 #SBATCH --time=6:00:00
 #SBATCH --mem=50G
 #SBATCH --cpus-per-task=32
@@ -96,10 +96,6 @@ module load cesga/2020 deepvariant/1.6.0
 
         
     # Write the bash script to a file
-    script_file = f'scripts/deepvariant/{sample}_gvcf.sh'
+    script_file = f'/home/csic/eye/lmf/scripts/deepvariant/novogene_lp_sept23/{sample}_gvcf.sh'
     with open(script_file, 'w') as f:
       f.write(script)
-            
-            
-            
-            #### TENGO QUE AÑADIR LA RUTA A LAS REGIONES PSEUDOATOSÓMICAS (crear el archivo mLynPar1.2_par.bed, ver las regiones que acumulan más cobertura en el cromosoma X).

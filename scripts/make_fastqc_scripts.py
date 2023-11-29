@@ -32,8 +32,8 @@ Here's an example of the bash script that would be generated for sample1, fastq_
 
 #!/bin/bash
 #SBATCH --job-name=sample1_fastq_pair_1
-#SBATCH --output=logs/fastqc/sample1_fastq_pair_1.out
-#SBATCH --error=logs/fastqc/sample1_fastq_pair_1.err
+#SBATCH --output=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/fastqc/sample1_fastq_pair_1.out
+#SBATCH --error=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/fastqc/sample1_fastq_pair_1.err
 #SBATCH --time=3:00:00
 #SBATCH --mem=4G
 #SBATCH --cpus-per-task=6
@@ -68,8 +68,8 @@ for sample in data['sample_dict']:
         script = f'''\
 #!/bin/bash
 #SBATCH --job-name={sample}_{fastq_pair}
-#SBATCH --output=logs/fastqc/{sample}_{fastq_pair}.out
-#SBATCH --error=logs/fastqc/{sample}_{fastq_pair}.err
+#SBATCH --output=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/fastqc/{sample}_{fastq_pair}.out
+#SBATCH --error=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/fastqc/{sample}_{fastq_pair}.err
 #SBATCH --time=3:00:00
 #SBATCH --mem=4G
 #SBATCH --cpus-per-task=6
@@ -80,6 +80,6 @@ module load cesga/2020 fastqc/0.11.9
 '''
         
         # Write the bash script to a file
-        script_file = f'scripts/fastqc/{sample}_{fastq_pair}.sh'
+        script_file = f'/home/csic/eye/lmf/scripts/fastQC/{sample}_{fastq_pair}.sh'
         with open(script_file, 'w') as f:
             f.write(script)

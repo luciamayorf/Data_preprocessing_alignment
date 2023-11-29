@@ -14,10 +14,10 @@
 
 # The script will take as input a list of fastq files and a folder with the bam files. It will then search for the bam files that correspond to the fastq files and create the dictionary.
 
-# Specify the paths to the fastq list and bam folder.
+# Specify the paths to the fastq list and bam folder
 FASTQ_LIST='/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/novogene_lp_sept2023/fastq_samples_list.txt'
 BAM_FOLDER='/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams'
-DICTIONARY='all_bams_calling.yml'
+DICTIONARY='/home/csic/eye/lmf/Data_preprocessing_alignment/config/all_bams_qualimap_calling.yml'
 
 # Print the first line with "sample_dict:"
 echo "sample_dict:" > "${DICTIONARY}"

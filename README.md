@@ -10,6 +10,8 @@ In this repository, I keep the scripts used for sequencing data quality control 
 
 First, we do a first FastQC analysis of the FASTQ files received with FastQC.
 
+I run all the scripts from the package directoy in CESGA ft3:/home/csic/eye/lmf/Data_preprocessing_alignment.
+
 ```py
 python scripts/make_fastqc_scripts.py config/all_rawreads_fastqs.yml
 ```
@@ -144,13 +146,22 @@ For the pseudoatosomal regions, we will establish a standard PAR1 region of 7 Mb
 We first use a bash script to create the samples bams dictionary:
 
 ```bash
-bash ./scripts/make_deepvariant_dictionary.sh
+bash make_deepvariant_dictionary.sh
 ```
 
 Then we generate a deepvariant script per sample:
 
 ```py
 python scripts/make_deepvariant_scripts.py config/all_bams_qualimap_and_calling.yml
+```
+
+Finally, we run the scripts:
+
+```bash
+for script in /home/csic/eye/lmf/scripts/deepvariant/novogene_lp_sept23/*_gvcf.sh; do
+  echo "sbatch of ${script}"
+  sbatch ${script}    
+done
 ```
 
 ---
