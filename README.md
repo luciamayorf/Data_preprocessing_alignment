@@ -139,6 +139,8 @@ ME QUEDO AQUÍ. NO HE PROBADO EL FUNCIONAMIENTO DE NINGÚN SCRIPT EXCEPTO EL DE 
 
 This part is only applicable to the high coverage dataset (50 individuals at ~30X). We use the WGS model from [DeepVariant](https://github.com/google/deepvariant) to call variants in our dataset.
 
+For the pseudoatosomal regions, we will establish a standard PAR1 region of 7 Mb in the beginning of the X and Y chromosomes, according to the existing bibliography: between [6 Mb](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5155386/)-[6.5Mb](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5522595/) and [10 Mb](https://onlinelibrary.wiley.com/doi/full/10.1111/eva.13302).
+
 We first use a bash script to create the samples bams dictionary:
 
 ```bash
@@ -164,7 +166,7 @@ module load cesga/2020 glnexus/1.4.1
 module load cesga/2020 bzip2/1.0.8
 module load cesga/2020 samtools/1.14
 
-glnexus_cli --config DeepVariant /in/*.g.vcf.gz | bcftools view - | bgzip -@ 4 -c > output.vcf.gz
+glnexus_cli --config DeepVariantWGS /in/*.g.vcf.gz | bcftools view - | bgzip -@ 4 -c > output.vcf.gz
 ```
 
-MIRAR LO DEL UNFILTERED MODO DE GLNEXUS-DV.
+MIRAR LO DEL UNFILTERED MODO DE GLNEXUS-DV. MIRAR LOS INPUTS Y OUTPUTS DE TODOS LOS SCRITPS.
