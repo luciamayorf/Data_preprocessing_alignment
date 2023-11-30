@@ -135,8 +135,6 @@ for script in /path/to/qualimap/scripts/*_qualimap.sh; do
 done
 ```
 
-ME QUEDO AQUÍ. NO HE PROBADO EL FUNCIONAMIENTO DE NINGÚN SCRIPT EXCEPTO EL DE DEEPVARIANT.
-
 ---
 
 ## 4. Variant calling
