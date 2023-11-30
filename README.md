@@ -26,13 +26,13 @@ for sh in $(ls scripts/rawreads_fastqc/*.sh)
 done
 ```
 
-PRUEBO ESTA PARTE, FUNCIONA OK.
-
 Finally, we summarize the obtained results running the MultiQC script.
 
 ```bash
 sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastqc/output>
 ```
+
+PRUEBO HASTA AQUÍ. FUNCIONA OK. PROBLEMA QUE VEO: CADA VEZ QUE CORRO UN MAKE_SCRIPTS.PY, TENGO QUE CAMBIAR DENTRO DEL SCRIPT LA RUTA DE ALMACENAMIENTO DE LOS SCRIPTS EN FUNCIÓN DEL PROYECTO QUE ESTÉ EJECUTANDO.
 
 ---
 
@@ -84,7 +84,7 @@ sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/outpu
 
 ## 3. Alignment and quality control
 
- After that, we perform a quality control of the aligment with qualimap, samtools and MultiQC.
+After that, we perform a quality control of the aligment with qualimap, samtools and MultiQC.
 
 ### 3.1. Alignment
 
@@ -166,20 +166,25 @@ for script in /home/csic/eye/lmf/scripts/deepvariant/novogene_lp_sept23/*_gvcf.s
 done
 ```
 
+### 4.1. Variant calling quality control
+
+I will use [bcftools stats](https://samtools.github.io/bcftools/bcftools.html#stats) to check the quality of the VCF files. It doesn't take long to perform the operation, so I can just run in interactively in a loop.
+
+```bash
+module load samtools
+
+for i in /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/*_mLynPar1.2_ref.vcf.gz; do
+  bcftools stats ${i} > /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/$(basename "${i}" .vcf.gz)_stats.txt
+done
+```
+
+Then I will run a fast multiQC:
+```bash
+sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/vcfst>
+```
+
 ---
 
 ## 5. gVCF merging
 
 We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF.
-
-Initial test, should be something like this:
-
-```bash
-module load cesga/2020 glnexus/1.4.1
-module load cesga/2020 bzip2/1.0.8
-module load cesga/2020 samtools/1.14
-
-glnexus_cli --config DeepVariantWGS /in/*.g.vcf.gz | bcftools view - | bgzip -@ 4 -c > output.vcf.gz
-```
-
-MIRAR LO DEL UNFILTERED MODO DE GLNEXUS-DV. MIRAR LOS INPUTS Y OUTPUTS DE TODOS LOS SCRITPS.
