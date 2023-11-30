@@ -26,6 +26,8 @@ for sh in $(ls scripts/rawreads_fastqc/*.sh)
 done
 ```
 
+PRUEBO ESTA PARTE, FUNCIONA OK.
+
 Finally, we summarize the obtained results running the MultiQC script.
 
 ```bash
