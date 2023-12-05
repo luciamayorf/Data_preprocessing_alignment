@@ -80,8 +80,6 @@ Finally, we summarize the obtained results running the MultiQC script.
 sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/output>
 ```
 
-PRUEBO HASTA AQUÍ. FUNCIONA OK. PROBLEMA QUE VEO: CADA VEZ QUE CORRO UN MAKE_SCRIPTS.PY, TENGO QUE CAMBIAR DENTRO DEL SCRIPT LA RUTA DE ALMACENAMIENTO DE LOS SCRIPTS EN FUNCIÓN DEL PROYECTO QUE ESTÉ EJECUTANDO, ASÍ COMO LOS LOGS.
-
 ---
 
 ## 3. Alignment and quality control
@@ -105,7 +103,7 @@ After generating those scripts, we need to add some lines to the script to load 
 ```bash
 for script in /path/to/aligment/scripts/*_mLynPar1.2_ref_aligner.sh; do
     if [ -f "$script" ]; then
-        sed -i '2i\#SBATCH -e /mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/slurm-%j.err\n#SBATCH -o /mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/slurm-%j.out\n' "$script"
+        sed -i '2i\#SBATCH -e /mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/alignments/slurm-%j.err\n#SBATCH -o /mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/alignments/slurm-%j.out\n' "$script"
         sed -i '6i\module load bwa\nmodule load samtools\nmodule load picard\nmodule load gatk/3.7-0-gcfedb67\n' "$script"
     fi
 done
@@ -119,6 +117,9 @@ for script in /path/to/aligment/scripts/*_mLynPar1.2_ref_aligner.sh; do
   sbatch -t 05:00:00 -c 20 --mem 25GB ${script}    
 done
 ```
+
+PRUEBO HASTA AQUÍ. FUNCIONA OK. PROBLEMA QUE VEO: CADA VEZ QUE CORRO UN MAKE_SCRIPTS.PY, TENGO QUE CAMBIAR DENTRO DEL SCRIPT LA RUTA DE ALMACENAMIENTO DE LOS SCRIPTS EN FUNCIÓN DEL PROYECTO QUE ESTÉ EJECUTANDO, ASÍ COMO LOS LOGS.
+
 
 ### 3.2. Mapping quality control
 
