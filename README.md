@@ -187,8 +187,25 @@ sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/vcfst>
 
 ## 5. gVCF merging
 
-We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF. We will generate a bash script to run GLnexus with the DeepVariantWGS configuration. GLnexus needs to be run inside the folder where the gVCFs are located. The name of the output VCF needs to be changed inside the script.
+We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF. We will use the configuration "DeepVariantWGS", which already applies some soft quality filters (AQ >10) to decrease the false positive rate and the VCF file size.
+
+We will generate a bash script to run GLnexus with the DeepVariantWGS configuration. GLnexus needs to be run inside the folder where the gVCFs are located. The name of the output VCF needs to be changed inside the script.
 
 ```bash
 sbatch /home/csic/eye/lmf/Data_preprocessing_alignment/scripts/glnexus_script.sh 
 ```
+
+### 5.1. VCF quality control
+
+We generate an index of the VCF file and some stats:
+```bash
+module load samtools
+module load gatk
+module load multiqc
+
+bcftools index -t /path/to/vcf.gz
+bcftools stats /path/to/vcf.gz > /path/to/vcf_stats.txt
+
+gatk VariantEval -R /path/to/reference_genome.fa -eval /path/to/vcf.gz -O gatk_stats.txt
+
+multiqc gatk_stats.txt /path/to/vcf_stats.txt
