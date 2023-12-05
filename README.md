@@ -187,64 +187,8 @@ sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/vcfst>
 
 ## 5. gVCF merging
 
-We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF.
-we will generate a bash script to run GLnexus with the DeepVariantWGS configuration. The scritps takes three positional arguments: the input directory with the gVCF files, the output directory where the merged VCF will be saved, and the name of the output VCF and jobname. 
-
-PRUEBA1
+We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF. We will generate a bash script to run GLnexus with the DeepVariantWGS configuration. GLnexus needs to be run inside the folder where the gVCFs are located. The name of the output VCF needs to be changed inside the script.
 
 ```bash
-#!/bin/bash
-
-# This script runs GLnexus in a set of gVCFs (must be in the same directory), and outputs a VCF. It takes three arguments: -i </input/directory> -o <output/directory> -vcf <output/vcf>
-
-# Parse command-line options
-while getopts i:o:vcf: option; do
-  case "${option}" in
-    i) input_dir=${OPTARG};;
-    o) output_dir=${OPTARG};;
-    vcf) vcf_name=${OPTARG};;
-  esac
-done
-
-#SBATCH --output=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/glnexus/${vcf_name}.out
-#SBATCH --error=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/glnexus/${vcf_name}.err
-#SBATCH --job-name=${vcf_name}
-#SBATCH --time=06:00:00
-#SBATCH --mem=50G
-#SBATCH --cpus-per-task=20
-
-module load cesga/2020 glnexus/1.4.1
-module load cesga/2020 bzip2/1.0.8
-module load cesga/2020 samtools/1.14
-
-glnexus_cli --config DeepVariantWGS ${input_dir}/*.g.vcf.gz | bcftools view - | bgzip -@ 18 -c > ${output_dir}/${vcf_name}.vcf.gz
-
-```
-
-PRUEBA 2
-```bash
-#!/bin/bash
-
-#SBATCH --output=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/glnexus/slurm-%j.out
-#SBATCH --error=/mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/glnexus/slurm-%j.err
-#SBATCH --job-name=${vcf_name}
-#SBATCH --time=06:00:00
-#SBATCH --mem=100G
-#SBATCH --cpus-per-task=30
-
-# This script runs GLnexus in a set of gVCFs (must be in the same directory), and outputs a VCF. It takes three arguments, which should be specified when launching the job with sbatch: -input_dir </input/directory> -output_dir </output/directory> -vcf_name <output_vcf>
-
-# The script should be launched like this: 
-  # sbatch --export=ALL,input_dir=/input/directory,output_dir=/output/directory,vcf_name=vcf_name glnexus_script.sh
-
-module load cesga/2020 glnexus/1.4.1
-module load cesga/2020 bzip2/1.0.8
-module load cesga/2020 samtools/1.14
-
-# to limit the number of opened file descriptors at once:
-ulimit -Sn 65536
-
-# running the command:
-glnexus_cli --config DeepVariantWGS ${input_dir}/*.g.vcf.gz --mem-gbytes 90 -t 28 | bcftools view - | bgzip -@ 25 -c > ${output_dir}/${vcf_name}.vcf.gz
-
+sbatch /home/csic/eye/lmf/Data_preprocessing_alignment/scripts/glnexus_script.sh 
 ```
