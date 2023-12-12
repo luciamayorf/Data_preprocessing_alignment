@@ -138,6 +138,12 @@ for script in /path/to/qualimap/scripts/*_qualimap.sh; do
 done
 ```
 
+Finally, we summarize the obtained results running the MultiQC script.
+
+```bash
+sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/output>
+```
+
 ---
 
 ## 4. Variant calling
