@@ -149,7 +149,7 @@ For the pseudoatosomal regions, we will establish a standard PAR1 region of 7 Mb
 We first use a bash script to create the samples bams dictionary:
 
 ```bash
-bash make_deepvariant_dictionary.sh
+bash make_bams_dictionary.sh
 ```
 
 Then we generate a deepvariant script per sample:
