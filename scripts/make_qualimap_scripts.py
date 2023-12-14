@@ -29,7 +29,7 @@ Here's an example of the bash script that would be generated for a bam file:
 #SBATCH --job-name=alignment1_qualimap
 #SBATCH --output=logs/qualimap/alignment1_qualimap.out
 #SBATCH --error=logs/qualimap/alignment1_qualimap.err
-#SBATCH --time=1:00:00
+#SBATCH --time=6:00:00
 #SBATCH --mem=10GB
 #SBATCH --cpus-per-task=10
 
@@ -65,7 +65,7 @@ for sample in data['sample_dict']:
 #SBATCH --job-name={bam_name_root}_qualimap
 #SBATCH --output=logs/qualimap/{bam_name_root}_qualimap.out
 #SBATCH --error=logs/qualimap/{bam_name_root}_qualimap.err
-#SBATCH --time=1:00:00
+#SBATCH --time=6:00:00
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=10
 
