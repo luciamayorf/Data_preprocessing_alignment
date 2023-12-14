@@ -118,7 +118,6 @@ for script in /path/to/aligment/scripts/*_mLynPar1.2_ref_aligner.sh; do
 done
 ```
 
-PRUEBO HASTA AQUÍ. FUNCIONA OK. PROBLEMA QUE VEO: CADA VEZ QUE CORRO UN MAKE_SCRIPTS.PY, TENGO QUE CAMBIAR DENTRO DEL SCRIPT LA RUTA DE ALMACENAMIENTO DE LOS SCRIPTS EN FUNCIÓN DEL PROYECTO QUE ESTÉ EJECUTANDO, ASÍ COMO LOS LOGS.
 
 
 ### 3.2. Mapping quality control
@@ -144,6 +143,7 @@ Finally, we summarize the obtained results running the MultiQC script.
 sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/output>
 ```
 
+PRUEBO HASTA AQUÍ. FUNCIONA OK. PROBLEMA QUE VEO: CADA VEZ QUE CORRO UN MAKE_SCRIPTS.PY, TENGO QUE CAMBIAR DENTRO DEL SCRIPT LA RUTA DE ALMACENAMIENTO DE LOS SCRIPTS EN FUNCIÓN DEL PROYECTO QUE ESTÉ EJECUTANDO, ASÍ COMO LOS LOGS.
 ---
 
 ## 4. Variant calling
