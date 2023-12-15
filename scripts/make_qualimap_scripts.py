@@ -30,12 +30,12 @@ Here's an example of the bash script that would be generated for a bam file:
 #SBATCH --output=logs/qualimap/alignment1_qualimap.out
 #SBATCH --error=logs/qualimap/alignment1_qualimap.err
 #SBATCH --time=6:00:00
-#SBATCH --mem=10GB
+#SBATCH --mem=20GB
 #SBATCH --cpus-per-task=10
 
 module load qualimap
 
-qualimap bamqc sample1.bam --java-mem-size=10G -outfile alignment1_qualimap.html -outformat html -outdir /path/to/bams/qualimap_output/alignment1_qualimap
+qualimap bamqc sample1.bam --java-mem-size=19G -outfile alignment1_qualimap.html -outformat html -outdir /path/to/bams/qualimap_output/alignment1_qualimap
 '''
 
 
@@ -57,7 +57,7 @@ for sample in data['sample_dict']:
     bam_name_root = os.path.splitext(bam_name)[0]
 
     # Generate the qualimap command
-    command = f'qualimap bamqc -bam {bam} --java-mem-size=10G -outfile {bam_name_root}_qualimap.html -outformat html -outdir {containing_folder}/qualimap_output/{bam_name_root}_qualimap'
+    command = f'qualimap bamqc -bam {bam} --java-mem-size=19G -outfile {bam_name_root}_qualimap.html -outformat html -outdir {containing_folder}/qualimap_output/{bam_name_root}_qualimap'
         
     # Generate the bash script
     script = f'''\
@@ -66,7 +66,7 @@ for sample in data['sample_dict']:
 #SBATCH --output=logs/qualimap/{bam_name_root}_qualimap.out
 #SBATCH --error=logs/qualimap/{bam_name_root}_qualimap.err
 #SBATCH --time=6:00:00
-#SBATCH --mem=10G
+#SBATCH --mem=20G
 #SBATCH --cpus-per-task=10
 
 module load qualimap
