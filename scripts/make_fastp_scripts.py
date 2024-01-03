@@ -88,15 +88,15 @@ for sample in data['sample_dict']:
         fastp_r2_out = os.path.join(fastp_folder, fastp_r2)
 
         # fastp json and html output files
-        fastp_html = f'{fastq_pair}_fastp.html'
+        fastp_html = f'{sample}_{fastq_pair}_fastp.html'
         fastp_html_out = os.path.join(fastp_folder, fastp_html)
-        fastp_json = f'{fastq_pair}_fastp.json'
+        fastp_json = f'{sample}_{fastq_pair}_fastp.json'
         fastp_json_out = os.path.join(fastp_folder, fastp_json)
         
         # unpaired and failed output files
-        unpaired = f'{fastq_pair}_unpaired.fastq.gz'
+        unpaired = f'{sample}_{fastq_pair}_unpaired.fastq.gz'
         unpaired_out = os.path.join(fastp_folder, unpaired)
-        failed = f'{fastq_pair}_failed.fastq.gz'
+        failed = f'{sample}_{fastq_pair}_failed.fastq.gz'
         failed_out = os.path.join(fastp_folder, failed)
 
         # Generate the fastp command
