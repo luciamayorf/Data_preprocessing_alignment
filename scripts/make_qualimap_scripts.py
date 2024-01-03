@@ -35,7 +35,7 @@ Here's an example of the bash script that would be generated for a bam file:
 
 module load qualimap
 
-qualimap bamqc sample1.bam --java-mem-size=19G -outfile alignment1_qualimap.html -outformat html -outdir /path/to/bams/qualimap_output/alignment1_qualimap
+qualimap bamqc -bam sample1.bam --skip-duplicated --java-mem-size=19G -outfile alignment1_qualimap.html -outformat html -outdir /path/to/bams/qualimap_output/alignment1_qualimap 
 '''
 
 
@@ -57,7 +57,7 @@ for sample in data['sample_dict']:
     bam_name_root = os.path.splitext(bam_name)[0]
 
     # Generate the qualimap command
-    command = f'qualimap bamqc -bam {bam} --java-mem-size=19G -outfile {bam_name_root}_qualimap.html -outformat html -outdir {containing_folder}/qualimap_output/{bam_name_root}_qualimap'
+    command = f'qualimap bamqc -bam {bam} --skip-duplicated --java-mem-size=19G -outfile {bam_name_root}_qualimap.html -outformat html -outdir {containing_folder}/qualimap_output/{bam_name_root}_qualimap'
         
     # Generate the bash script
     script = f'''\
