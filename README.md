@@ -122,7 +122,15 @@ done
 
 ### 3.2. Mapping quality control
 
-We will use Qualimap bamqc. We first create a script for each bam file:
+We will use Qualimap bamqc. 
+
+We first use a bash script to create the samples bams dictionary:
+
+```bash
+bash make_bams_dictionary.sh
+```
+
+Then, we create a script for each bam file:
 
 ```py
 python scripts/make_qualimap_scripts.py config/all_bams_qualimap_and_calling.yml
@@ -146,69 +154,7 @@ sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/fastp_fastqc/outpu
 PRUEBO HASTA AQUÍ. FUNCIONA OK. PROBLEMA QUE VEO: CADA VEZ QUE CORRO UN MAKE_SCRIPTS.PY, TENGO QUE CAMBIAR DENTRO DEL SCRIPT LA RUTA DE ALMACENAMIENTO DE LOS SCRIPTS EN FUNCIÓN DEL PROYECTO QUE ESTÉ EJECUTANDO, ASÍ COMO LOS LOGS.
 ---
 
-## 4. Variant calling
 
-This part is only applicable to the high coverage dataset (50 individuals at ~30X). We use the WGS model from [DeepVariant](https://github.com/google/deepvariant) to call variants in our dataset.
-
-For the pseudoatosomal regions, we will establish a standard PAR1 region of 7 Mb in the beginning of the X and Y chromosomes, according to the existing bibliography: between [6 Mb](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5155386/)-[6.5Mb](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5522595/) and [10 Mb](https://onlinelibrary.wiley.com/doi/full/10.1111/eva.13302).
-
-We first use a bash script to create the samples bams dictionary:
-
-```bash
-bash make_bams_dictionary.sh
-```
-
-Then we generate a deepvariant script per sample:
-
-```py
-python scripts/make_deepvariant_scripts.py config/all_bams_qualimap_and_calling.yml
-```
-
-Finally, we run the scripts:
-
-```bash
-for script in /home/csic/eye/lmf/scripts/deepvariant/novogene_lp_sept23/*_gvcf.sh; do
-  echo "sbatch of ${script}"
-  sbatch ${script}    
-done
-```
-
-### 4.1. Variant calling quality control
-
-I will use [bcftools stats](https://samtools.github.io/bcftools/bcftools.html#stats) to check the quality of the VCF files. It doesn't take long to perform the operation, so I can just run in interactively in a loop.
-
-```bash
-module load samtools
-
-for i in /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/*_mLynPar1.2_ref.vcf.gz; do
-  bcftools stats ${i} > /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_vcfs/$(basename "${i}" .vcf.gz)_stats.txt
-done
-```
-
-Then I will run a fast multiQC:
-```bash
-sbatch -t 01:00:00 -c 20 --mem 5GB multiqc_script.sh <path/to/vcfst>
-```
-
----
-
-## 5. gVCF merging
-
-We will use GLnexus, which converts multiple VCF files to a single BCF file, which then needs to be converted to a VCF. We will use the configuration "DeepVariantWGS", which already applies some soft quality filters (AQ >10) to decrease the false positive rate and the VCF file size.
-
-We will generate a bash script to run GLnexus with the DeepVariantWGS configuration. GLnexus needs to be run inside the folder where the gVCFs are located. The name of the output VCF needs to be changed inside the script.
-
-```bash
-sbatch /home/csic/eye/lmf/Data_preprocessing_alignment/scripts/glnexus_script.sh 
-```
-
-### 5.1. VCF quality control
-
-We generate an index of the VCF file and some stats:
-```bash
-module load samtools
-module load gatk
-module load multiqc
 
 bcftools index -t /path/to/vcf.gz
 bcftools stats /path/to/vcf.gz > /path/to/vcf_stats.txt
