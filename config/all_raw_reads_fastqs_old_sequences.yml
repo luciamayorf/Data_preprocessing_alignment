@@ -1,0 +1,229 @@
+sample_dict:
+  c_lp_sm_0134: 
+    C5TMUACXX_1nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TMUACXX_2_1nf_1.fastq.gz', 'C5TMUACXX_2_1nf_2.fastq.gz']
+    C5TN1ACXX_1nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TN1ACXX_7_1nf_1.fastq.gz', 'C5TN1ACXX_7_1nf_2.fastq.gz']
+  c_lp_do_0141:
+    C5TMUACXX_2_2nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TMUACXX_2_2nf_1.fastq.gz', 'C5TMUACXX_2_2nf_2.fastq.gz']
+  c_lp_do_0144:
+    C5RRAACXX_5_3nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RRAACXX_5_3nf_1.fastq.gz', 'C5RRAACXX_5_3nf_2.fastq.gz']
+    C5T3DACXX_2_3nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_2_3nf_1.fastq.gz', 'C5T3DACXX_2_3nf_2.fastq.gz']
+  c_lp_sm_0155:
+    C5RRAACXX_5_4nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RRAACXX_5_4nf_1.fastq.gz', 'C5RRAACXX_5_4nf_2.fastq.gz']
+  c_lp_sm_0156:
+    C5TMUACXX_3_5nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TMUACXX_3_5nf_1.fastq.gz', 'C5TMUACXX_3_5nf_2.fastq.gz']
+    C5TN1ACXX_7_5nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TN1ACXX_7_5nf_1.fastq.gz', 'C5TN1ACXX_7_5nf_2.fastq.gz']
+  c_lp_sm_0161:
+    C5TMUACXX_3_6nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TMUACXX_3_6nf_1.fastq.gz', 'C5TMUACXX_3_6nf_2.fastq.gz']
+  c_lp_do_0162:
+    C5TMTACXX_6_7nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TMTACXX_6_7nf_1.fastq.gz', 'C5TMTACXX_6_7nf_2.fastq.gz']
+    C5TN1ACXX_7_7nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TN1ACXX_7_7nf_1.fastq.gz', 'C5TN1ACXX_7_7nf_2.fastq.gz']
+  c_lp_do_0163:
+    C5RR4ACXX_1_1nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_1_1nf_1.fastq.gz', 'C5RR4ACXX_1_1nf_2.fastq.gz']
+    C5TN1ACXX_8_1nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TN1ACXX_8_1nf_1.fastq.gz', 'C5TN1ACXX_8_1nf_2.fastq.gz']
+  c_lp_sm_0206:
+    C5RR4ACXX_1_2nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_1_2nf_1.fastq.gz', 'C5RR4ACXX_1_2nf_2.fastq.gz']
+    C5TN1ACXX_8_2nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TN1ACXX_8_2nf_1.fastq.gz', 'C5TN1ACXX_8_2nf_2.fastq.gz']
+  c_lp_sm_0208:
+    C5RR4ACXX_2_3nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_2_3nf_1.fastq.gz', 'C5RR4ACXX_2_3nf_2.fastq.gz']
+    C5T3DACXX_1_3nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_1_3nf_1.fastq.gz', 'C5T3DACXX_1_3nf_2.fastq.gz']
+  c_lp_sm_0213:
+    C5RR4ACXX_2_4nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_2_4nf_1.fastq.gz', 'C5RR4ACXX_2_4nf_2.fastq.gz']
+    C5T3DACXX_1_4nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_1_4nf_1.fastq.gz', 'C5T3DACXX_1_4nf_2.fastq.gz']
+  c_lp_sm_0226:
+    C5RR4ACXX_3_5nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_3_5nf_1.fastq.gz', 'C5RR4ACXX_3_5nf_2.fastq.gz']
+    C5T3DACXX_1_5nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_1_5nf_1.fastq.gz', 'C5T3DACXX_1_5nf_2.fastq.gz']
+  c_lp_sm_0276:
+    C5RR4ACXX_3_6nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_3_6nf_1.fastq.gz', 'C5RR4ACXX_3_6nf_2.fastq.gz']
+    C5T3DACXX_1_6nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_1_6nf_1.fastq.gz', 'C5T3DACXX_1_6nf_2.fastq.gz']
+  c_lp_do_0300:
+    C5RR4ACXX_4_7nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_4_7nf_1.fastq.gz', 'C5RR4ACXX_4_7nf_2.fastq.gz']
+    C5T3DACXX_2_7nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_2_7nf_1.fastq.gz', 'C5T3DACXX_2_7nf_2.fastq.gz']
+  c_lp_sm_0320:
+    C5RR4ACXX_4_8nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_4_8nf_1.fastq.gz', 'C5RR4ACXX_4_8nf_2.fastq.gz']
+    C5T3DACXX_1_8nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_1_8nf_1.fastq.gz', 'C5T3DACXX_1_8nf_2.fastq.gz']
+  c_lp_sm_0325:
+    C5RR4ACXX_5_9nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_5_9nf_1.fastq.gz', 'C5RR4ACXX_5_9nf_2.fastq.gz']
+    C5T3DACXX_2_9nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_2_9nf_1.fastq.gz', 'C5T3DACXX_2_9nf_2.fastq.gz']
+  c_lp_do_0333:
+    C5RR4ACXX_5_10nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_5_10nf_1.fastq.gz', 'C5RR4ACXX_5_10nf_2.fastq.gz']
+    C5TMDACXX_5_10nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5TMDACXX_5_10nf_1.fastq.gz', 'C5TMDACXX_5_10nf_2.fastq.gz']
+  c_lp_do_0335:
+    C5RR4ACXX_6_11nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_6_11nf_1.fastq.gz', 'C5RR4ACXX_6_11nf_2.fastq.gz']
+    C5T3DACXX_2_11nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_2_11nf_1.fastq.gz', 'C5T3DACXX_2_11nf_2.fastq.gz']
+  c_lp_do_0444:
+    C5RR4ACXX_6_12nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_6_12nf_1.fastq.gz', 'C5RR4ACXX_6_12nf_2.fastq.gz']
+    C5T3DACXX_2_12nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_2_12nf_1.fastq.gz', 'C5T3DACXX_2_12nf_2.fastq.gz']
+  c_lp_sm_0450:
+    C5RR4ACXX_7_13nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5RR4ACXX_7_13nf_1.fastq.gz', 'C5RR4ACXX_7_13nf_2.fastq.gz']
+    C5T3DACXX_2_13nf:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/LYNX_06_08', 'C5T3DACXX_2_13nf_1.fastq.gz', 'C5T3DACXX_2_13nf_2.fastq.gz']
+  c_lp_do_0153:
+    B09HCABXX_2_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B09HCABXX_2_0_1.fastq.gz', 'B09HCABXX_2_0_2.fastq.gz']
+    B09HCABXX_1_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B09HCABXX_1_0_1.fastq.gz', 'B09HCABXX_1_0_2.fastq.gz']
+    B0B5KABXX_1_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0B5KABXX_1_0_1.fastq.gz', 'B0B5KABXX_1_0_2.fastq.gz']
+    B0B5KABXX_2_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0B5KABXX_2_0_1.fastq.gz', 'B0B5KABXX_2_0_2.fastq.gz']
+  c_lp_do_0173:
+    B09HCABXX_5_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B09HCABXX_5_0_1.fastq.gz', 'B09HCABXX_5_0_2.fastq.gz']
+    B09HCABXX_6_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B09HCABXX_6_0_1.fastq.gz', 'B09HCABXX_6_0_2.fastq.gz']
+    B0B5KABXX_6_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0B5KABXX_6_0_1.fastq.gz', 'B0B5KABXX_6_0_2.fastq.gz']
+    B0B5KABXX_5_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0B5KABXX_5_0_1.fastq.gz', 'B0B5KABXX_5_0_2.fastq.gz']
+  c_lp_do_0443:
+    D0D6JABXX_4_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_4_0_1.fastq.gz', 'D0D6JABXX_4_0_2.fastq.gz']
+    D0D6JABXX_3_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_3_0_1.fastq.gz', 'D0D6JABXX_3_0_2.fastq.gz']
+    B0999ABXX_3_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_3_0_1.fastq.gz', 'B0999ABXX_3_0_2.fastq.gz']
+    B0999ABXX_4_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_4_0_1.fastq.gz', 'B0999ABXX_4_0_2.fastq.gz']
+  c_lp_sm_0138:
+    B09HCABXX_3_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B09HCABXX_3_0_1.fastq.gz', 'B09HCABXX_3_0_2.fastq.gz']
+    B09HCABXX_4_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B09HCABXX_4_0_1.fastq.gz', 'B09HCABXX_4_0_2.fastq.gz']
+    B0B5KABXX_3_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0B5KABXX_3_0_1.fastq.gz', 'B0B5KABXX_3_0_2.fastq.gz']
+    B0B5KABXX_4_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0B5KABXX_4_0_1.fastq.gz', 'B0B5KABXX_4_0_2.fastq.gz']
+  c_lp_sm_0140:
+    C02CHABXX_1_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_1_0_1.fastq.gz', 'C02CHABXX_1_0_2.fastq.gz']
+    C02CHABXX_2_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_2_0_1.fastq.gz', 'C02CHABXX_2_0_2.fastq.gz']
+    C02CHABXX_4_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_4_0_1.fastq.gz', 'C02CHABXX_4_0_2.fastq.gz']
+    C02CHABXX_3_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_3_0_1.fastq.gz', 'C02CHABXX_3_0_2.fastq.gz']
+  c_lp_sm_0185:
+    D0D6JABXX_2_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_2_0_1.fastq.gz', 'D0D6JABXX_2_0_2.fastq.gz']
+    D0D6JABXX_1_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_1_0_1.fastq.gz', 'D0D6JABXX_1_0_2.fastq.gz']
+    B0999ABXX_2_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_2_0_1.fastq.gz', 'B0999ABXX_2_0_2.fastq.gz']
+    B0999ABXX_1_0: 
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_1_0_1.fastq.gz', 'B0999ABXX_1_0_2.fastq.gz']
+  c_lp_sm_0186:
+    D0D6JABXX_5_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_5_0_1.fastq.gz', 'D0D6JABXX_5_0_2.fastq.gz']
+    D0D6JABXX_6_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_6_0_1.fastq.gz', 'D0D6JABXX_6_0_2.fastq.gz']
+    B0999ABXX_6_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_6_0_1.fastq.gz', 'B0999ABXX_6_0_2.fastq.gz']
+    B0999ABXX_5_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_5_0_1.fastq.gz', 'B0999ABXX_5_0_2.fastq.gz']
+  c_lp_sm_0298:
+    D0D6JABXX_8_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_8_0_1.fastq.gz', 'D0D6JABXX_8_0_2.fastq.gz']
+    D0D6JABXX_7_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'D0D6JABXX_7_0_1.fastq.gz', 'D0D6JABXX_7_0_2.fastq.gz']
+    B0999ABXX_7_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_7_0_1.fastq.gz', 'B0999ABXX_7_0_2.fastq.gz']
+    B0999ABXX_8_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'B0999ABXX_8_0_1.fastq.gz', 'B0999ABXX_8_0_2.fastq.gz']
+  c_lp_sm_0359:
+    C02CHABXX_6_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_6_0_1.fastq.gz', 'C02CHABXX_6_0_2.fastq.gz']
+    C02CHABXX_7_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_7_0_1.fastq.gz', 'C02CHABXX_7_0_2.fastq.gz']
+    C02CHABXX_5_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_5_0_1.fastq.gz', 'C02CHABXX_5_0_2.fastq.gz']
+    C02CHABXX_8_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project', 'C02CHABXX_8_0_1.fastq.gz', 'C02CHABXX_8_0_2.fastq.gz']
+  c_lp_sm_0221:
+    6220RAAXX_lane3_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane3_sequence_0_1.fastq.gz', '6220RAAXX_lane3_sequence_0_2.fastq.gz']
+    6220RAAXX_lane4_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane4_sequence_0_1.fastq.gz', '6220RAAXX_lane4_sequence_0_2.fastq.gz']
+    6220RAAXX_lane6_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane6_sequence_0_1.fastq.gz', '6220RAAXX_lane6_sequence_0_2.fastq.gz']  
+    6220RAAXX_lane7_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane7_sequence_0_1.fastq.gz', '6220RAAXX_lane7_sequence_0_2.fastq.gz']
+    6220RAAXX_lane8_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane8_sequence_0_1.fastq.gz', '6220RAAXX_lane8_sequence_0_2.fastq.gz']
+    6220RAAXX_lane1_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane1_sequence_0_1.fastq.gz', '6220RAAXX_lane1_sequence_0_2.fastq.gz']
+    6220RAAXX_lane5_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane5_sequence_0_1.fastq.gz', '6220RAAXX_lane5_sequence_0_2.fastq.gz']
+    6220RAAXX_lane2_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/6220RAAXX', '6220RAAXX_lane2_sequence_0_1.fastq.gz', '6220RAAXX_lane2_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane1_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane1_sequence_0_1.fastq.gz', '62AHEAAXX_lane1_sequence_0_2.fastq.gz']  
+    62AHEAAXX_lane2_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane2_sequence_0_1.fastq.gz', '62AHEAAXX_lane2_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane3_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane3_sequence_0_1.fastq.gz', '62AHEAAXX_lane3_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane4_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane4_sequence_0_1.fastq.gz', '62AHEAAXX_lane4_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane5_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane5_sequence_0_1.fastq.gz', '62AHEAAXX_lane5_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane6_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane6_sequence_0_1.fastq.gz', '62AHEAAXX_lane6_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane7_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane7_sequence_0_1.fastq.gz', '62AHEAAXX_lane7_sequence_0_2.fastq.gz']
+    62AHEAAXX_lane8_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/62AHEAAXX', '62AHEAAXX_lane8_sequence_0_1.fastq.gz', '62AHEAAXX_lane8_sequence_0_2.fastq.gz']
+    621CYAAXX_lane1_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/621CYAAXX', '621CYAAXX_lane1_sequence_0_1.fastq.gz', '621CYAAXX_lane1_sequence_0_2.fastq.gz']  
+    706WBAAXX_lane1_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane1_sequence_0_1.fastq.gz', '706WBAAXX_lane1_sequence_0_2.fastq.gz']
+    706WBAAXX_lane2_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane2_sequence_0_1.fastq.gz', '706WBAAXX_lane2_sequence_0_2.fastq.gz']
+    706WBAAXX_lane3_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane3_sequence_0_1.fastq.gz', '706WBAAXX_lane3_sequence_0_2.fastq.gz']
+    706WBAAXX_lane4_sequence_0:
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane4_sequence_0_1.fastq.gz', '706WBAAXX_lane4_sequence_0_2.fastq.gz']
+    706WBAAXX_lane5_sequence_0: 
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane5_sequence_0_1.fastq.gz', '706WBAAXX_lane5_sequence_0_2.fastq.gz']
+    706WBAAXX_lane6_sequence_0: 
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane6_sequence_0_1.fastq.gz', '706WBAAXX_lane6_sequence_0_2.fastq.gz']
+    706WBAAXX_lane7_sequence_0: 
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane7_sequence_0_1.fastq.gz', '706WBAAXX_lane7_sequence_0_2.fastq.gz']
+    706WBAAXX_lane8_sequence_0: 
+      ['/mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/Lypa_PE_reads/706WBAAXX', '706WBAAXX_lane8_sequence_0_1.fastq.gz', '706WBAAXX_lane8_sequence_0_2.fastq.gz']
+
+
