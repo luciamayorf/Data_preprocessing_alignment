@@ -2,7 +2,7 @@
 
 This repository is an inspiration from Enrico's [Lynx_demography](https://github.com/Enricobazzi/Lynx_Demography) repository.
 
-In this repository, I keep the scripts used for sequencing data quality control ([fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [multiQC](https://multiqc.info/docs/)), trimming ([fastp](https://github.com/OpenGene/fastp)), alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package), variant calling ([DeepVariant](https://github.com/google/deepvariant)) and gVCF merging ([GLnexus](https://github.com/dnanexus-rnd/GLnexus)).
+In this repository, I keep the scripts used for sequencing data quality control ([fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [multiQC](https://multiqc.info/docs/)), trimming ([fastp](https://github.com/OpenGene/fastp)), alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package) and quality control of the aligment ([qualimap](http://qualimap.conesalab.org/doc_html/analysis.html)).
 
 ** The scripts are only tested with one sample of the ones sequenced in previous projects, but they seem to work.
 
