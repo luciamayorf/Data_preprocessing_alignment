@@ -24,3 +24,6 @@ Then we summarize the results with multiqc, running the script [multiqc_script.s
 ```bash
 sbatch -t 00:15:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/multiqc_script.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project/fastqc
 ```
+---
+
+## 2. Reads trimming
