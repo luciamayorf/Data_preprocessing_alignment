@@ -64,8 +64,6 @@ sbatch -t 00:15:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing
 
 After that, we perform a quality control of the aligment with qualimap, samtools and MultiQC.
 
-### 3.1. Alignment
-
 We align the reads to the reference genome using Enrico's package [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) to generate the scripts. I downloaded the whole package and installed it in my $HOME in CESGA's ft3. I work from directory "/home/csic/eye/lmf/alignments/congenomics_fastq_align-0.1.0"
 
 We start from a list of the samples, in this case, I obtain it from the second column of fastq sample list. Here, the YAML template not only contains a sample dictionary, but also the paths to the reference genome, the output folder, and the modules that need to be loaded to run the script.
@@ -96,3 +94,16 @@ for script in /home/csic/eye/lmf/scripts/alignment_sh/old_sequences/*_mLynPar1.2
 done
 ```
 
+### Alignment quality control
+
+We will use Qualimap bamqc with the script [bams_qualimap.sh]() <input_bam>. 
+
+```{bash}
+for input_bam in $(ls /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/old_sequences/*_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam); do
+  job_id=$(sbatch -c 10 --mem=20GB -t 06:00:00 /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/bams_qualimap.sh ${input_bam} | awk '{print $4}')
+  echo "${job_id} ${input_bam}" >> /mnt/lustre/scratch/nlsas/home/csic/eye/lmf/logs/qualimap/job_ids_qualimap_old_sequences.txt
+done
+
+sbatch -t 00:30:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/multiqc_script.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/old_sequences/qualimap_output
+```
+---
