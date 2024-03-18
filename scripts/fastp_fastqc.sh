@@ -9,7 +9,7 @@
 
 # Usage of the script simultaneously for several bam files:
 #    for input_fastq in $(cat fastq_list.txt); do 
-#        job_id=(sbatch -c 6 --mem=4GB -t 03:00:00 fastqs_fastQC.sh <${input_fastq}> | awk '{print $4}')
+#        job_id=(sbatch -c 6 --mem=4GB -t 03:00:00 fastp_fastqc.sh <${input_fastq}> | awk '{print $4}')
 #        echo "${job_id} ${input_bam}" >> /logs/fastqc/job_ids_fastqc.txt
 #    done
 
