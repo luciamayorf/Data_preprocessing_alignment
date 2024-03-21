@@ -96,7 +96,7 @@ done
 
 ### Alignment quality control
 
-We will use Qualimap bamqc with the script [bams_qualimap.sh]() <input_bam>. 
+We will use Qualimap bamqc with the script [bams_qualimap.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/bams_qualimap.sh) <input_bam>. 
 
 ```{bash}
 for input_bam in $(ls /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/old_sequences/*_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam); do
