@@ -23,7 +23,7 @@ bam=${1}
 output_directory=$(dirname ${bam})
 
 # Define the name of the bam file:
-bam_name=$(basename ${bam})
+bam_name=$(basename ${bam} .bam)
 
 # Create the output directory if it doesn't exist:
 mkdir -p ${output_directory}/qualimap_output
