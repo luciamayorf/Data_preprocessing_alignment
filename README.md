@@ -106,4 +106,14 @@ done
 
 sbatch -t 00:30:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/multiqc_script.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/old_sequences/qualimap_output
 ```
+
+#### Effective coverage estimation
+
+Using one of the outputs of Qualimap, we want to estimate the effective coverage, defined as the -ln (1 - f_cov), where f_cov is the fraction of the reference genome covered by at least one read. We will use the custom script [effective_cov_qualimap.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/effective_cov_qualimap.sh) <input_qualimap_directory>
+
+```{bash}
+sbatch -t 00:10:00 --mem 1GB /home/csic/eye/lmf/scripts/alignmentQC_sh/effective_cov_qualimap.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/pool_epil_all/qualimap_outpu
+```
+
+
 ---
