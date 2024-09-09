@@ -7,10 +7,10 @@
 # Example of the fastqc command:
 #   fastqc -o /path/to/pair1/fastqc -t 6 /path/to/pair1/pair1_r1.fastq.gz /path/to/pair1/pair1_r2.fastq.gz
 
-# Usage of the script simultaneously for several bam files:
+# Usage of the script simultaneously for several fastq files:
 #    for input_fastq in $(cat fastq_list.txt); do 
 #        job_id=(sbatch -c 6 --mem=4GB -t 03:00:00 fastqs_fastQC.sh <${input_fastq}> | awk '{print $4}')
-#        echo "${job_id} ${input_bam}" >> /logs/fastqc/job_ids_fastqc.txt
+#        echo "${job_id} ${input_fastq}" >> /logs/fastqc/job_ids_fastqc.txt
 #    done
 
 # Load the fastqc module:
