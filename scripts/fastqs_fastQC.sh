@@ -17,7 +17,7 @@
 module load cesga/2020 fastqc/0.11.9
 module load multiqc
 
-# Define the input bam file:
+# Define the input fastq file:
 fastq=${1}
 
 # Define the output directory:
