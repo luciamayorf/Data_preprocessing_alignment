@@ -18,16 +18,16 @@
 # --detect_adapter_for_pe \
 # --thread 6
 
-# Usage of the script simultaneously for several bam files:
+# Usage of the script simultaneously for several fastq files:
 #    for input_fastq in $(cat fastq_list.txt); do 
 #        job_id=(sbatch -c 6 --mem=4GB -t 03:00:00 fastp_trimming.sh <${input_fastq}> | awk '{print $4}')
-#        echo "${job_id} ${input_bam}" >> /logs/fastp/job_ids_fastp.txt
+#        echo "${job_id} ${input_fastq}" >> /logs/fastp/job_ids_fastp.txt
 #    done
 
 # Load the fastp module:
 module load cesga/2020 gcccore/system fastp/0.22.0
 
-# Define the input bam file:
+# Define the input fastq file:
 fastq=${1}
 
 # Define the fastq filename:
@@ -41,7 +41,7 @@ mkdir -p ${fastq_directory}/fastp
 
 # Run fastp in the pair of reads:
 fastp \
-    -i ${fastq}_1.fastq.gz -I ${fastq}_2.fastq.gz \
+    -i ${fastq}_1.fq.gz -I ${fastq}_2.fq.gz \
     -o ${fastq_directory}/fastp/${fastq_basename}_1.fastp.fastq.gz -O ${fastq_directory}/fastp/${fastq_basename}_2.fastp.fastq.gz \
     -h ${fastq_directory}/fastp/${fastq_basename}_fastp.html -j ${fastq_directory}/fastp/${fastq_basename}_fastp.json \
     --unpaired1 ${fastq_directory}/fastp/${fastq_basename}_unpaired.fastq.gz --unpaired2 ${fastq_directory}/fastp/${fastq_basename}_unpaired.fastq.gz \
