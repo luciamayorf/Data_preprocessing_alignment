@@ -33,7 +33,7 @@ while read line ; do
 	CODEFQ=($(basename "${FQ}"))
 
 	# get the fastq uniq code (the lane where it was sequenced). This variable definition might change a lot depending on the format of the fastq name:
-    CODEFQ_ID=($(echo "${CODEFQ}" | rev | cut -f2- -d'_' | rev))
+    	CODEFQ_ID=($(echo "${CODEFQ}" | rev | cut -f2- -d'_' | rev))
 
 	# get the final sample name:
 	SAMPLE_NAME=($(echo "${line}" | cut -f2))
