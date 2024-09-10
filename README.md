@@ -68,6 +68,11 @@ We align the reads to the reference genome using Enrico's package [congenomics_f
 
 For that, we need to generate a sample dictionary using the custom script [make_fastqs_dictionary.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/make_fastqs_dictionary.sh). This script requires a list where the first column contains the path and the pair of fastq prefix (no .fq.gz) and the second column contains the final sample name, tab-separated (Careful with the CODE_IDFQ variable definition, it highly depends on the fastq name format!!!).
 
+> /path/to/FASTQ_files/LYNX_06_08/C5TMUACXX_2_1nf     c_lp_sm_0134
+/path/to/FASTQ_files/LYNX_06_08/C5TN1ACXX_7_1nf     c_lp_sm_0134
+/path/to/FASTQ_files/LYNX_06_08/C5TMUACXX_2_2nf     c_lp_do_0141
+
+
 We start from a list of the samples, in this case, I obtain it from the second column of fastq sample list. Here, the YAML template not only contains a sample dictionary, but also the paths to the reference genome, the output folder, and the modules that need to be loaded to run the script.
 
 ```bash
