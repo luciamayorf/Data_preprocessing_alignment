@@ -1,18 +1,16 @@
-# Data_preprocessing_alignment_v2
+# Data preprocessing and alignment
 
-This repository is an inspiration from Enrico's [Lynx_demography](https://github.com/Enricobazzi/Lynx_Demography) repository.
+In this repository, I keep the scripts used for WGS sequencing data quality control ([fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [multiQC](https://multiqc.info/docs/)), trimming ([fastp](https://github.com/OpenGene/fastp)), alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package) and quality control of the aligment ([qualimap](http://qualimap.conesalab.org/doc_html/analysis.html)).
 
-In this repository, I keep the scripts used for sequencing data quality control ([fastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [multiQC](https://multiqc.info/docs/)), trimming ([fastp](https://github.com/OpenGene/fastp)), alignment (Enrico's [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) python package) and quality control of the aligment ([qualimap](http://qualimap.conesalab.org/doc_html/analysis.html)).
-
-** The scripts are only tested with one sample of the ones sequenced in previous projects, but they seem to work.
+** The scripts shown are tested with one sample sequenced in previous projects.
 
 ---
 
 ## 1. Raw data quality control
 
-First, we do a first FastQC analysis of the FASTQ files received with FastQC and multiQC to summarize the results. I run the script [fastqs_fastQC.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/fastqs_fastQC.sh) <input_fastq> to obtain the fastQC of each pair of reads.
+First, we do a first FastQC analysis of the FASTQ files received with FastQC and multiQC to summarize the results, running the script [fastqs_fastQC.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/fastqs_fastQC.sh) <input_fastq> to obtain the fastQC of each pair of reads.
 
-Note: the sample list here have a very specific format, with the following columns: path/to/fastq(witought fastq_suffix not distinguising between read1 and read2), sample name, sex.
+Note: the sample list here have a very specific format, with the following columns: path/to/fastq (without fastq_suffix not distinguising between read1 and read2), sample name, sex.
 
 ```bash
 for input_fastq in $(cut -f1 /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/fastq_paths_samples_list_old_sequences.txt); do
@@ -21,7 +19,7 @@ for input_fastq in $(cut -f1 /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx
 done
 ```
 
-Then we summarize the results with multiqc, running the script [multiqc_script.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/multiqc_script.sh) <fastq_output_directory>
+Then we summarize the results with multiqc, running the script [multiqc_script.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/multiqc_script.sh) <fastq_output_directory>
 
 ```bash
 sbatch -t 00:15:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/multiqc_script.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project/fastqc
@@ -33,7 +31,7 @@ sbatch -t 00:15:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing
 
 We do a first trimming with fastp, followed by a quality control with FastQC and MultiQC of the trimmed reads.
 
-We run fastp with the script [fastp_trimming.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/fastp_trimming.sh) <input_fastq>:
+We run fastp with the script [fastp_trimming.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/fastp_trimming.sh) <input_fastq>:
 ```bash
 for input_fastq in $(cut -f1 /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/fastq_paths_samples_list_old_sequences.txt); do
   job_id=$(sbatch -c 6 --mem=6GB -t 02:00:00 /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/fastp_trimming.sh ${input_fastq} | awk '{print $4}')
@@ -43,7 +41,7 @@ done
 
 ### Trimming quality control
 
-Then we assess the quality of the trimming with the script [fastp_fastqc.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/fastp_fastqc.sh) <input_fastq>:
+Then we assess the quality of the trimming with the script [fastp_fastqc.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/fastp_fastqc.sh) <input_fastq>:
 
 ```bash
 for input_fastq in $(ls /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project/fastp/*.fastp.fastq.gz); do
@@ -52,7 +50,7 @@ for input_fastq in $(ls /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_geno
 done
 ```
 
-Finally, we summarize the obtained results running [multiqc_script.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/multiqc_script.sh) <fastq_output_directory>.
+Finally, we summarize the obtained results running [multiqc_script.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/multiqc_script.sh) <fastq_output_directory>.
 
 ```bash
 sbatch -t 00:15:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing_alignment/multiqc_script.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/FASTQ_files/genome_proyect_backup/fastq_genome_project/fastp/fastqc
@@ -66,7 +64,7 @@ After that, we perform a quality control of the aligment with qualimap, samtools
 
 We align the reads to the reference genome using Enrico's package [congenomics_fastq_align](https://github.com/Enricobazzi/congenomics_fastq_align) to generate the scripts. I downloaded the whole package and installed it in my $HOME in CESGA's ft3. I work from directory "/home/csic/eye/lmf/alignments/congenomics_fastq_align-0.1.0"
 
-For that, we need to generate a sample dictionary using the custom script [make_fastqs_dictionary.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/make_fastqs_dictionary.sh). This script requires a list where the first column contains the path and the pair of fastq prefix (no .fq.gz) and the second column contains the final sample name, tab-separated (Careful with the CODE_IDFQ variable definition, it highly depends on the fastq name format!!!). Example:
+For that, we need to generate a sample dictionary using the custom script [make_fastqs_dictionary.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/make_fastqs_dictionary.sh). This script requires a list where the first column contains the path and the pair of fastq prefix (no .fq.gz) and the second column contains the final sample name, tab-separated (careful with the CODE_IDFQ variable definition, it highly depends on the fastq name format!). Example:
 
 > /path/to/FASTQ_files/LYNX_06_08/C5TMUACXX_2_1nf     c_lp_sm_0134
 >
@@ -105,7 +103,7 @@ done
 
 ### Alignment quality control
 
-We will use Qualimap bamqc with the script [bams_qualimap.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/bams_qualimap.sh) <input_bam>. 
+We will use Qualimap bamqc with the script [bams_qualimap.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/bams_qualimap.sh) <input_bam>. 
 
 ```{bash}
 for input_bam in $(ls /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/old_sequences/*_mLynPar1.2_ref_sorted_rg_merged_sorted_rmdup_indelrealigner.bam); do
@@ -118,7 +116,7 @@ sbatch -t 00:30:00 -c 10 --mem 5GB /home/csic/eye/lmf/scripts/Data_preprocessing
 
 #### Effective coverage estimation
 
-Using one of the outputs of Qualimap, we want to estimate the effective coverage, defined as the -ln (1 - f_cov) by [Steward et al. (2024)](https://www.biorxiv.org/content/10.1101/2024.01.30.578044v1), where f_cov is the fraction of the reference genome covered by at least one read. We will use the custom script [effective_cov_qualimap.sh](https://github.com/luciamayorf/Data_preprocessing_alignment_v2/blob/main/scripts/effective_cov_qualimap.sh) <input_qualimap_directory>
+Using one of the outputs of Qualimap, we want to estimate the effective coverage, defined as the -ln (1 - f_cov) by [Steward et al. (2024)](https://www.biorxiv.org/content/10.1101/2024.01.30.578044v1), where f_cov is the fraction of the reference genome covered by at least one read. We will use the custom script [effective_cov_qualimap.sh](https://github.com/luciamayorf/Data_preprocessing_alignment/blob/main/scripts/effective_cov_qualimap.sh) <input_qualimap_directory>
 
 ```{bash}
 sbatch -t 00:10:00 --mem 1GB /home/csic/eye/lmf/scripts/alignmentQC_sh/effective_cov_qualimap.sh /mnt/lustre/hsm/nlsas/notape/home/csic/ebd/jgl/lynx_genome/lynx_data/mLynPar1.2_ref_bams/pool_epil_all/qualimap_outpu
